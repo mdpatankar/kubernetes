@@ -73,17 +73,16 @@ Once your open the Web based terminal, you are ready to explore Kubernetes Objec
 
 ## Pod: Managing pods with kubectl
 
-Use kubectl combined with instructions in a YAML file to do
-anything you'd like
+Use kubectl combined with instructions in a YAML file to do anything you'd like
 
-   ```
+```
 	kubectl create -f <name>.yaml
   
-   ```
+```
 
 For e.g. nginx.yaml
 
-    ```
+```
 	apiVersion: v1 
 	kind: Pod 
 	metadata:
@@ -94,25 +93,30 @@ For e.g. nginx.yaml
       - name: nginx
         image: nginx
 
+```
    
 To get all the pods , running in your default namespace
 
-    ```
+```
  		kubectl get pods
 
+```
 
-Get More details about your pod, shows all details about a pod, including information about containers running within
+### Get More details about your pod, shows all details about a pod, including information about containers running within
 
-     ```
+```
 		kubectl describe pods 
 	
 		kubectl describe pod mypod	
 
+```
 
 To Edit live pod, you can do  	
 
- 	```
-		kubectl edit pod mypod 
+```
+	kubectl edit pod mypod 
+
+```
 
  	
  	
@@ -120,7 +124,7 @@ To Edit live pod, you can do
 
 
 
-	```
+```
 	apiVersion: v1
 	kind: Service
 	metadata:
@@ -132,7 +136,7 @@ To Edit live pod, you can do
 	  selector:                 3
     	app: kubia              3
     
-    ```
+```
 
 
 
