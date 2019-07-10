@@ -81,10 +81,11 @@ anything you'd like
   
    ```
 
-For e.g. 
+For e.g. nginx.yaml
 
     ```
-	apiVersion: v1 kind: Pod 
+	apiVersion: v1 
+	kind: Pod 
 	metadata:
   	  name: mypod
   	  namespace: default 
@@ -93,15 +94,12 @@ For e.g.
       - name: nginx
         image: nginx
 
-   ```
-
+   
 To get all the pods , running in your default namespace
 
     ```
+ 		kubectl get pods
 
-		kubectl get pods
-
-   ```
 
 Get More details about your pod, shows all details about a pod, including information about containers running within
 
@@ -110,17 +108,45 @@ Get More details about your pod, shows all details about a pod, including inform
 	
 		kubectl describe pod mypod	
 
- 	```
+
 To Edit live pod, you can do  	
 
  	```
-	kubectl edit pod mypod 
+		kubectl edit pod mypod 
 
- 	```
  	
  	
+## Services:
 
 
+
+	```
+	apiVersion: v1
+	kind: Service
+	metadata:
+  	   name: kubia
+	spec:
+  	  ports:
+  	  - port: 80                1
+        targetPort: 8080        2
+	  selector:                 3
+    	app: kubia              3
+    
+    ```
+
+
+
+1 The port this service will be available on
+2 The container port the service will forward to
+3 All pods with the app=kubia label will be part of this service.
+You’re defining a service called kubia, which will accept connections on port 80 and route each connection to port 8080 of one of the pods matching the app=kubia label selector.
+
+Go ahead and create the service by posting the file using kubectl create.
+
+    
+    
+    
+    
 
 
 
