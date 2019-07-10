@@ -71,7 +71,7 @@ c. Web based terminal opens at the bottom of the browser.
      
 Once your open the Web based terminal, you are ready to explore Kubernetes Objects.
 
-#Managing pods with kubectl
+## Pod: Managing pods with kubectl
 
 Use kubectl combined with instructions in a YAML file to do
 anything you'd like
@@ -84,14 +84,14 @@ anything you'd like
 For e.g. 
 
     ```
-apiVersion: v1 kind: Pod 
-metadata:
-  name: mypod
-  namespace: default 
-spec:
- containers:
-  - name: nginx
-    image: nginx
+	apiVersion: v1 kind: Pod 
+	metadata:
+  	  name: mypod
+  	  namespace: default 
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
 
    ```
 
@@ -99,26 +99,26 @@ To get all the pods , running in your default namespace
 
     ```
 
-kubectl get pods
+		kubectl get pods
 
    ```
 
 Get More details about your pod, shows all details about a pod, including information about containers running within
 
      ```
-	kubectl describe pods 
+		kubectl describe pods 
 	
-	kubectl describe pod mypod
-	
- 	
+		kubectl describe pod mypod	
+
+ 	```
+To Edit live pod, you can do  	
+
+ 	```
+	kubectl edit pod mypod 
+
  	```
  	
  	
-For instance, kubectl describe pods newhttpd
-
-kubectl edit pod mypod allows editing of live pods
-
-
 
 
 
