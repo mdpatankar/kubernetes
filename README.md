@@ -140,10 +140,15 @@ To Edit live pod, you can do
 
 
 
-1 The port this service will be available on
-2 The container port the service will forward to
+1 The port this service will be available on.
+
+2 The container port the service will forward to.
+
 3 All pods with the app=kubia label will be part of this service.
-You’re defining a service called kubia, which will accept connections on port 80 and route each connection to port 8080 of one of the pods matching the app=kubia label selector.
+
+You’re defining a service called kubia, which will accept connections on port 80 and route 
+each connection to port 8080 of one of the pods matching the app=kubia label selector.
+
 
 Go ahead and create the service by posting the file using kubectl create.
 
