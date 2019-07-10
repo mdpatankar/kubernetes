@@ -71,107 +71,89 @@ c. Web based terminal opens at the bottom of the browser.
      
 Once your open the Web based terminal, you are ready to explore Kubernetes Objects.
 
+## Lab
+
 ## Pod: Managing pods with kubectl
 
-Use kubectl combined with instructions in a YAML file to do anything you'd like
+Creating the pod manually.
+
+You will be creating Pod manually using YAML File.
 
 ```
-	kubectl create -f <name>.yaml
-  
+	 kubia-manual.yaml
+	 
+	 kubectl apply -f  kubia-manual.yaml
+	 
 ```
 
-For e.g. nginx.yaml
+Please use file from this repository
+
+
+## ReplicaSet: 
+
+Creating ReplicaSet.
+
+This replicaset will create 3 pods of kubia automatically.
 
 ```
-	apiVersion: v1 
-	kind: Pod 
-	metadata:
-  	  name: mypod
-  	  namespace: default 
-    spec:
-      containers:
-      - name: nginx
-        image: nginx
-
-```
-   
-To get all the pods , running in your default namespace
-
-```
- 		kubectl get pods
-
+  kubia-rs.yaml
+ 
+  kubectl apply -f kubia-rs.yaml
+ 
 ```
 
-### Get More details about your pod, shows all details about a pod, including information about containers running within
+This is not manual creation of Pods.
+
+You will use kubia-rs.yaml file to Create ReplicaSet
+
+
+## Service: 
+
+For creating Service, you will be using kubia-svc.yaml file.
 
 ```
-		kubectl describe pods 
-	
-		kubectl describe pod mypod	
+	 kubia-svc.yaml
+	 	
+	 kubectl apply -f kubia-svc.yaml
+```
+
+This will create a Kubia Service. This will internally use the Pods for loadbalancing this service.
+
+To test how this calls the service
+
+You will have to get service
+```
+$ kubectl get svc
+NAME         CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
+kubernetes   10.111.240.1     <none>        443/TCP   30d
+kubia        10.111.249.153   <none>        80/TCP    6m        1
 
 ```
 
-To Edit live pod, you can do  	
-
-```
-	kubectl edit pod mypod 
-
-```
-
- 	
- 	
-## Services:
-
+Note the IP address ( Cluster IP) of service - 10.111.249.153 
 
 
 ```
-	apiVersion: v1
-	kind: Service
-	metadata:
-  	   name: kubia
-	spec:
-  	  ports:
-  	  - port: 80                1
-        targetPort: 8080        2
-	  selector:                 3
-    	app: kubia              3
-    
+$ kubectl get pods
+
+NAME          READY   STATUS    RESTARTS   AGE
+kubia-5l4q5   1/1     Running   0          18m
+kubia-8k645   1/1     Running   0          18m
+kubia-rvm48   1/1     Running   0          18m
+
 ```
 
+Now lets try to test using curl
 
+```
+$ kubectl exec kubia-5l4q5 -- curl -s http://10.111.249.153
+You've hit kubia-5l4q5
 
-1 The port this service will be available on.
+```
 
-2 The container port the service will forward to.
+If you go on running this commands, you will observe it hits different pods, 
 
-3 All pods with the app=kubia label will be part of this service.
-
-You’re defining a service called kubia, which will accept connections on port 80 and route 
-each connection to port 8080 of one of the pods matching the app=kubia label selector.
-
-
-Go ahead and create the service by posting the file using kubectl create.
-
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Congratulations!!!!, You have successfully completed the lab 
 
 
 
