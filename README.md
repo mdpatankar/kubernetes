@@ -167,7 +167,7 @@ https://www.ibm.com/cloud/garage/dte/tutorial/ibm-cloud-private-hosted-trial
 You will receive email with Skytap instance to explore.
 
 
-# For Lab : Refer the document from this repo.
+### For Lab : Refer the document from this repo.
 CGIDay2_Lab.docx
 
 
