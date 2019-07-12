@@ -167,7 +167,9 @@ https://www.ibm.com/cloud/garage/dte/tutorial/ibm-cloud-private-hosted-trial
 You will receive email with Skytap instance to explore.
 
 
-### For Lab : Refer the document from this repo.
+### For Lab 1 : 
+### IBM Cloud Private : Treasure Hunt , Artefacts on IBM Cloud Artefacts
+Refer the document from this repo.
 CGIDay2_Lab.docx
 
 
@@ -180,7 +182,7 @@ https://transformationadvisor.github.io/doc/
 
 For more resources on garage
 
-## Migrate traditional WebSphere apps to WebSphere Liberty on IBM Cloud Private by using Kubernetes
+### Migrate traditional WebSphere apps to WebSphere Liberty on IBM Cloud Private by using Kubernetes
 https://www.ibm.com/cloud/garage/content/course/websphere-on-cloud-private/0
 
 
@@ -189,7 +191,8 @@ https://www.ibm.com/cloud/garage/content/course/websphere-on-cloud-private/0
 https://www.ibm.com/cloud/garage/dte/tutorial/multi-cluster-application-management
 
 
-## Debug and log your Kubernetes applications
+### For Lab 2 : 
+### Debug and log your Kubernetes applications
 
 https://developer.ibm.com/tutorials/debug-and-log-your-kubernetes-app/
 
