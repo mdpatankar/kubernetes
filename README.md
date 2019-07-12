@@ -1,4 +1,4 @@
-# Advance Cloud Workshop 
+# Advance Application Modernization Workshop 
 # Day 1
 
 ## 0. Register on IBM Cloud
