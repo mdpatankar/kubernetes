@@ -1,5 +1,5 @@
 # Advance Cloud Workshop 
-
+### Day 1
 
 ## 0. Register on IBM Cloud
 
@@ -154,6 +154,52 @@ You've hit kubia-5l4q5
 If you go on running this commands, you will observe it hits different pods, 
 
 ## Congratulations!!!!, You have successfully completed the lab 
+
+### Day 2
+
+## IBM Cloud Private 
+
+
+
+Reserve IBM Cloud Instance using your IBM registered 
+https://www.ibm.com/cloud/garage/dte/tutorial/ibm-cloud-private-hosted-trial
+
+You will receive email with Skytap instance to explore.
+
+
+For Lab : Refer the document from this repo.
+CGIDay2_Lab.docx
+
+
+
+## IBM Cloud Transformation Advisor
+
+Documentation available on
+
+https://transformationadvisor.github.io/doc/
+
+For more resources on garage
+
+# Migrate traditional WebSphere apps to WebSphere Liberty on IBM Cloud Private by using Kubernetes
+https://www.ibm.com/cloud/garage/content/course/websphere-on-cloud-private/0
+
+
+## IBM MultiCloudManager
+
+https://www.ibm.com/cloud/garage/dte/tutorial/multi-cluster-application-management
+
+
+
+
+## Debug and log your Kubernetes applications
+
+https://developer.ibm.com/tutorials/debug-and-log-your-kubernetes-app/
+
+
+
+
+
+
 
 
 
